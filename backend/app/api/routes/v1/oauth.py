@@ -53,6 +53,12 @@ async def authorize_provider(
     return AuthorizationURLResponse(authorization_url=auth_url, state=state)
 
 
+@router.post("/{provider}/callback")
+async def oauth_callback_post(provider: ProviderName):
+    """POST handler for providers that verify callback URL reachability (e.g., Withings)."""
+    return {"status": "ok"}
+
+
 @router.get("/{provider}/callback")
 async def oauth_callback(
     provider: ProviderName,

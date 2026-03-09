@@ -1,0 +1,1 @@
+# Withings provider integration

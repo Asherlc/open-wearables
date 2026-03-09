@@ -8,6 +8,7 @@ from app.services.providers.samsung.strategy import SamsungStrategy
 from app.services.providers.strava.strategy import StravaStrategy
 from app.services.providers.suunto.strategy import SuuntoStrategy
 from app.services.providers.whoop.strategy import WhoopStrategy
+from app.services.providers.withings.strategy import WithingsStrategy
 
 
 class ProviderFactory:
@@ -31,5 +32,7 @@ class ProviderFactory:
                 return WhoopStrategy()
             case ProviderName.STRAVA.value:
                 return StravaStrategy()
+            case ProviderName.WITHINGS.value:
+                return WithingsStrategy()
             case _:
                 raise ValueError(f"Unknown provider: {provider_name}")

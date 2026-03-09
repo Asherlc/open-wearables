@@ -98,6 +98,12 @@ class Settings(BaseSettings):
     whoop_redirect_uri: str = "http://localhost:8000/api/v1/oauth/whoop/callback"
     whoop_default_scope: str = "offline read:cycles read:sleep read:recovery read:workout"
 
+    # WITHINGS OAUTH SETTINGS
+    withings_client_id: str | None = None
+    withings_client_secret: SecretStr | None = None
+    withings_redirect_uri: str = "http://localhost:8000/api/v1/oauth/withings/callback"
+    withings_default_scope: str = "user.info,user.metrics,user.activity,user.sleepevents"
+
     # STRAVA OAUTH SETTINGS
     strava_client_id: str | None = None
     strava_client_secret: SecretStr | None = None

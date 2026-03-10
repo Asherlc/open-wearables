@@ -102,7 +102,7 @@ class Settings(BaseSettings):
     withings_client_id: str | None = None
     withings_client_secret: SecretStr | None = None
     withings_redirect_uri: str = "http://localhost:8000/api/v1/oauth/withings/callback"
-    withings_default_scope: str = "user.info,user.metrics,user.activity,user.sleepevents"
+    withings_default_scope: str = "user.info,user.metrics,user.activity"
 
     # STRAVA OAUTH SETTINGS
     strava_client_id: str | None = None
